@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Merge Sort Visualiser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>Merge Sort Visualiser</h1>
+<p>Divide the array, sort the halves, then merge them back together.</p>
+</header>
+
+<section id="controls">
+<div class="control-group">
+<label for="size-slider">Array size</label>
+<input type="range" id="size-slider" min="5" max="50" value="16" aria-label="Array size">
+<span id="size-value">16</span>
+</div>
+<div class="control-group">
+<label for="speed-slider">Speed</label>
+<input type="range" id="speed-slider" min="1" max="10" value="5" aria-label="Speed">
+<span id="speed-value">5</span>
+</div>
+<div class="control-group">
+<button id="new-array-btn">New Array</button>
+<button id="start-btn">Start</button>
+<button id="pause-btn" disabled>Pause</button>
+<button id="step-btn" disabled>Step</button>
+<button id="reset-btn" disabled>Reset</button>
+</div>
+<div class="control-group">
+<label for="custom-input">Custom array</label>
+<input type="text" id="custom-input" placeholder="e.g. 5,3,8,1" aria-label="Custom array">
+<button id="apply-btn">Apply</button>
+<span id="input-error" role="alert"></span>
+</div>
+</section>
+
+<section id="stats">
+<div>
+<span>Comparisons: </span><span id="comparisons-count">0</span>
+</div>
+<div>
+<span>Writes: </span><span id="writes-count">0</span>
+</div>
+<div>
+<span>Status: </span><span id="status">Ready</span>
+</div>
+</section>
+
+<section id="visualisation">
+<div id="bars"></div>
+<pre id="step-log"></pre>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
