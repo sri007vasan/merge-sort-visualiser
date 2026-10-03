@@ -34,25 +34,25 @@
 <label for="custom-input">Custom array</label>
 <input type="text" id="custom-input" placeholder="e.g. 5,3,8,1" aria-label="Custom array">
 <button id="apply-btn">Apply</button>
-<span id="input-error" role="alert"></span>
+<span id="input-error" role="alert" data-testid="input-error"></span>
 </div>
 </section>
 
 <section id="stats">
 <div>
-<span>Comparisons: </span><span id="comparisons-count">0</span>
+<span>Comparisons: </span><span id="comparisons-count" data-testid="comparisons-count">0</span>
 </div>
 <div>
-<span>Writes: </span><span id="writes-count">0</span>
+<span>Writes: </span><span id="writes-count" data-testid="writes-count">0</span>
 </div>
 <div>
-<span>Status: </span><span id="status">Ready</span>
+<span>Status: </span><span id="status" data-testid="status">Ready</span>
 </div>
 </section>
 
 <section id="visualisation">
 <div id="bars"></div>
-<pre id="step-log"></pre>
+<pre id="step-log" data-testid="step-log"></pre>
 </section>
 
 <script src="app.js"></script>

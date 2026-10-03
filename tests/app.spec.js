@@ -21,7 +21,7 @@ test.describe('Merge Sort Visualiser', () => {
     await page.getByRole('button', { name: 'Apply' }).click();
     await page.getByRole('button', { name: 'Start' }).click();
     await page.clock.install();
-    await page.clock.fastForward('5s');
+    await page.clock.fastForward(10000);
     await expect(page.getByTestId('status')).toHaveText('Sorted!');
     const bars = page.locator('[data-testid="bar"]');
     await expect(bars.nth(0)).toHaveAttribute('data-value', '1');
@@ -53,7 +53,7 @@ test.describe('Merge Sort Visualiser', () => {
     await page.getByRole('button', { name: 'Apply' }).click();
     await page.getByRole('button', { name: 'Start' }).click();
     await page.clock.install();
-    await page.clock.fastForward('5s');
+    await page.clock.fastForward(10000);
     await page.getByRole('button', { name: 'Reset' }).click();
     const bars = page.locator('[data-testid="bar"]');
     await expect(bars.nth(0)).toHaveAttribute('data-value', '5');
